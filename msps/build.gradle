@@ -38,3 +38,19 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation "androidx.security:security-crypto:1.1.0-alpha05"
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.guy'
+                artifactId = 'msps'
+                version = '1.3'
+            }
+        }
+    }
+}
