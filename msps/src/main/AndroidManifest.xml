@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <provider
+            android:name=".MspsContentProvider"
+            android:authorities="${applicationId}.MspsContentProvider"
+            android:exported="false"
+            android:enabled="true"
+            />
+
+    </application>
+
+</manifest>
